@@ -2,7 +2,14 @@ import './App.css';
 
 function App() {
   return (
-    <p>App component</p>
+    <div id="wrapper">
+      <header>
+        <span id="name">Nomen</span>
+        <div id="right-pannel">
+          Test
+        </div>
+      </header>
+    </div>
   );
 }
 

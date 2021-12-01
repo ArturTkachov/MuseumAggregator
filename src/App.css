@@ -1,0 +1,16 @@
+#wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    height: 48px;
+    margin-top: 20px;
+    display:flex;
+    justify-content: space-between;
+}
+
+#name{
+    font: bold 36px/48px Comfortaa;
+    letter-spacing: 1px;
+}
