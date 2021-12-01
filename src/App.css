@@ -14,3 +14,8 @@ header{
     font: bold 36px/48px Comfortaa;
     letter-spacing: 1px;
 }
+
+.icon{
+    width: 36px;
+    height: 36px;
+}
