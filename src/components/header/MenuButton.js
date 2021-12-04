@@ -1,8 +1,8 @@
 import React from 'react';
-import IconButton from './IconButton';
+import IconButton from '../IconButton';
 
-import menuIcon from '../assets/icons/red/menuRed.svg';
-import './css/MenuButton.css'
+import menuIcon from '../../assets/icons/red/menuRed.svg';
+import '../css/header/MenuButton.css'
 
 class MenuButton extends React.PureComponent{
   constructor() {

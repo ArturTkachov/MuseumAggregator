@@ -1,7 +1,7 @@
 import './App.css';
 
-import MainSearchBar from './components/MainSearchBar';
-import MenuButton from './components/MenuButton'
+import MainSearchBar from './components/header/MainSearchBar';
+import MenuButton from './components/header/MenuButton'
 
 function App() {
   return (
@@ -13,6 +13,9 @@ function App() {
           <MenuButton/>
         </div>
       </header>
+      <main>
+        <p>Test</p>
+      </main>
     </div>
   );
 }

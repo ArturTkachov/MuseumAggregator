@@ -9,7 +9,7 @@ function SearchBar(props) {
   return (
     <form className="search-bar" onSubmit={props.handleSubmit}>
       <InputBar value={props.value} inputClass={props.inputClass} handleInput={props.handleInput}/>
-      <IconButton submit={true} iconSrc={searchIcon} iconClass={props.iconClass}/>
+      <IconButton submit={true} iconClass={props.iconClass} iconSrc={searchIcon} />
     </form>
   );
 }
