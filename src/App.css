@@ -15,7 +15,10 @@ header{
     letter-spacing: 1px;
 }
 
-.icon{
-    width: 36px;
-    height: 36px;
+#right-panel{
+    display: flex;
+}
+
+#right-panel .search-bar{
+    margin-right: 25px;
 }
