@@ -3,3 +3,11 @@
     height: 36px;
     padding: 6px;
 }
+
+.menu-button-icon-hover{
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    border-radius: 3px;
+    background-color: #C23A4B;
+}
