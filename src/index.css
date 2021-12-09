@@ -10,7 +10,4 @@ body {
   background-color: #FEF6ED;
 }
 
-*:not(html, body, #root){
-  box-sizing: border-box;
-  border: 1px solid black;
-}
+
