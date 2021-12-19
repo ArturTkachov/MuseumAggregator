@@ -2,7 +2,7 @@ form.search-bar{
     display:flex;
 }
 
-.search-bar button{
+.search-bar img{
     background-color: #C23A4B;
     border-radius: 0 30px 30px 0;
 }
