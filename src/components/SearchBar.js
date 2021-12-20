@@ -5,7 +5,7 @@ import searchIcon from '../assets/icons/white/searchWhite.svg';
 
 import './css/SearchBar.css'
 
-function SearchBar(props) {
+const SearchBar = (props) => {
   return (
     <form className="search-bar" onSubmit={props.handleSubmit}>
       <InputBar value={props.value} inputClass={props.inputClass} handleInput={props.handleInput}/>
@@ -16,11 +16,11 @@ function SearchBar(props) {
 
 export default SearchBar;
 
-function InputBar(props) {
+const InputBar = (props) => {
   const className = `input-bar ${props.inputClass || ""}`;
   return (
     <input className={className} type="text" value={props.value} onChange={props.handleInput}/>
   );
-}
+};
 
 

@@ -1,0 +1,39 @@
+#menu{
+    position: fixed;
+    top:0;
+    right: 0;
+    z-index: 9999;
+    width: 20%;
+    height: 100%;
+    background-color: #FEF6ED;
+    display: flex;
+}
+
+#menu div:first-of-type{
+    color: #FEF6ED;
+    background-color: #C23A4B;
+}
+
+#menu nav{
+    width: 100%;
+}
+
+#menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item{
+    font-size: 30px;
+    line-height: 48px;
+    padding-left: 15px;
+    cursor:pointer;
+}
+
+.menu-item:hover{
+    color: #FEF6ED;
+    background-color: #C23A4B;
+}
