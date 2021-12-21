@@ -1,4 +1,4 @@
-import {useRef, useEffect} from 'react';
+import React, {useRef, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 
 import "../css/header/Menu.css";
@@ -9,7 +9,7 @@ const Menu = (props) => {
   const menuRef = useRef(null);
   useEffect(()=>{
     const handleOutsideClick = (e) => {
-      if(!e.target.contains(menuRef.current)) props.handleOutsideClick();
+      if(!menuRef.current.contains(e.target)) props.handleOutsideClick();
     };
     window.addEventListener('click', handleOutsideClick);
 

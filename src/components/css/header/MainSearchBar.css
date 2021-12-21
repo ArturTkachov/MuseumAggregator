@@ -1,9 +1,20 @@
 .main-sb-input{
-    width: 380px;
+    width: 400px;
+    position: relative;
+    left: 20px;
 }
 
-.main-sb-icon{
-    width: 36px;
-    height: 36px;
-    padding: 6px 10px 6px 6px;
+.main-sb-button{
+    width: 52px;
+    height: 48px;
+    z-index: 900;
+    transition: all 0.3s ease-out;
+    background: url("../../../assets/icons/white/searchWhite.svg") no-repeat 6px/36px;
+}
+
+.main-sb-button:hover{
+    width: 70px;
+    height:48px;
+    border-radius: 30px;
+    background-position: 17px 6px;
 }

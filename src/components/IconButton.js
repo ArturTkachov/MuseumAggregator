@@ -1,22 +1,12 @@
 import React from 'react';
 import './css/IconButton.css';
 
-const IconButton = React.memo(
-  function (props) {
+const IconButton = React.memo((props) => {
+    const className = `icon-button ${props.className}`;
     return (props.submit) ?
-      (
-        <button className="icon-button" onPointerOver={props.handlePointerOver}
-                type="submit" onPointerLeave={props.handlePointerLeave}>
-          <img className={props.iconClass || ""} src={props.iconSrc} alt="submit button"/>
-        </button>
-      )
+      (<button className={className} type="submit"/>)
       :
-      (
-        <button className="icon-button" onClick={props.handleClick}
-                onPointerOver={props.handlePointerOver} onPointerLeave={props.handlePointerLeave}>
-          <img className={props.iconClass || ""} src={props.iconSrc} alt="button"/>
-        </button>
-      );
+      (<button className={className} onClick={props.handleClick}/>);
   }
 );
 

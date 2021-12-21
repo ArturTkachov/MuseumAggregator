@@ -1,13 +1,12 @@
-.menu-button-icon{
-    width: 36px;
-    height: 36px;
-    padding: 6px;
+.menu-button{
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+    background: url("../../../assets/icons/red/menuRed.svg") no-repeat center/36px;
 }
 
-.menu-button-icon-hover{
-    width: 36px;
-    height: 36px;
-    padding: 6px;
-    border-radius: 3px;
-    background-color: #C23A4B;
+.menu-button:hover{
+    background: #C23A4B url("../../../assets/icons/white/menuWhite.svg") no-repeat center;
 }

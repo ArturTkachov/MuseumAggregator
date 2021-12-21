@@ -14,14 +14,14 @@ class MainSearchBar extends React.PureComponent{
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleInput(event){
+  handleInput(e){
     this.setState({
-      input: event.target.value,
+      input: e.target.value,
     });
   }
 
-  handleSubmit(event){
-    event.preventDefault();
+  handleSubmit(e){
+    e.preventDefault();
     this.setState({
       input: "",
     });
@@ -31,7 +31,7 @@ class MainSearchBar extends React.PureComponent{
     return (
         <SearchBar value={this.state.input}
                    inputClass="main-sb-input"
-                   iconClass="main-sb-icon"
+                   buttonClass="main-sb-button"
                    handleInput={this.handleInput}
                    handleSubmit={this.handleSubmit}
         />

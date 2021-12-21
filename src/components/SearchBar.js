@@ -1,7 +1,6 @@
 import React from 'react';
 import IconButton from './IconButton'
 
-import searchIcon from '../assets/icons/white/searchWhite.svg';
 
 import './css/SearchBar.css'
 
@@ -9,7 +8,7 @@ const SearchBar = (props) => {
   return (
     <form className="search-bar" onSubmit={props.handleSubmit}>
       <InputBar value={props.value} inputClass={props.inputClass} handleInput={props.handleInput}/>
-      <IconButton submit={true} iconClass={props.iconClass} iconSrc={searchIcon} />
+      <IconButton submit={true} className={props.buttonClass}/>
     </form>
   );
 }

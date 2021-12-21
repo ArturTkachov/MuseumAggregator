@@ -1,4 +1,5 @@
 #menu{
+    animation: slide-in 0.7s ease-out 0s 1 normal none running;
     position: fixed;
     top:0;
     right: 0;
@@ -30,10 +31,12 @@
     font-size: 30px;
     line-height: 48px;
     padding-left: 15px;
+    transition: background-color 0.6s ease-out;
     cursor:pointer;
 }
 
 .menu-item:hover{
     color: #FEF6ED;
     background-color: #C23A4B;
+    transition: background-color 0.3s ease-out;
 }
