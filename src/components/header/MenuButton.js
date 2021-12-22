@@ -35,11 +35,11 @@ class MenuButton extends React.PureComponent{
       <>
         <IconButton submit={false} handleClick={this.handleClick}
                     className="menu-button"/>
-        {isOpen &&
-        <Menu handleOutsideClick={this.handleOutsideClick}>
+
+        <Menu isOpen={isOpen} handleOutsideClick={this.handleOutsideClick}>
           <MenuCloseButton handleClick={this.handleClick}/>
           <MenuList/>
-        </Menu>}
+        </Menu>
       </>
     );
   }

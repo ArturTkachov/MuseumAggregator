@@ -1,5 +1,6 @@
 #menu{
-    animation: slide-in 0.7s ease-out 0s 1 normal none running;
+    transform: translate(100%, 0);
+    transition: all 0.7s ease-out;
     position: fixed;
     top:0;
     right: 0;
