@@ -1,0 +1,11 @@
+.menu-close-button{
+    width: 48px;
+    height: 48px;
+    cursor:pointer;
+    transition: all 0.3s ease-out;
+    background: url("../../../assets/icons/white/xWhite.svg") no-repeat center/36px;
+}
+
+.menu-close-button:hover{
+    background: #C23A4B url("../../../assets/icons/yellow/xYellow.svg") no-repeat center;
+}

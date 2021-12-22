@@ -1,0 +1,18 @@
+#page-description{
+    text-align: center;
+    color: #C23A4B;
+}
+
+#page-description h1{
+    font: normal 48px Comfortaa;
+    margin: 0 0 20px;
+}
+
+#page-description p{
+    text-align: center;
+    font: 24px Comfortaa;
+    margin: 0;
+    padding: 13px 0 13px;
+    border-top: 2px solid #F7D490;
+    border-bottom: 2px solid #F7D490;
+}
