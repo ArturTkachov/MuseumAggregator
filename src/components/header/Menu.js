@@ -9,9 +9,10 @@ const Menu = (props) => {
   const isOpen = props.isOpen;
 
   const menuRef = useRef(null);
+  const menu = menuRef.current;
   useEffect(()=>{
     const handleOutsideClick = (e) => {
-      if(isOpen && !menuRef.current.contains(e.target)) props.handleOutsideClick();
+      if(isOpen && !menu.contains(e.target)) props.handleOutsideClick();
     };
     window.addEventListener('click', handleOutsideClick);
 
@@ -23,8 +24,6 @@ const Menu = (props) => {
     if(isInitialMount.current){
       isInitialMount.current = false;
     }else{
-      const menu = menuRef.current;
-
       if(isOpen) {
         menu.style.opacity = "1";
         menu.style.transform = "translate(0, 0)";
@@ -33,7 +32,7 @@ const Menu = (props) => {
         menu.style.transform = "translate(100%, 0)";
       }
     }
-  },[isOpen]);
+  });
 
   return ReactDOM.createPortal(
     <div id="menu" ref={menuRef}>
