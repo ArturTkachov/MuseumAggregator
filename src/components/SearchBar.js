@@ -1,17 +1,17 @@
 import React from 'react';
 import IconButton from './IconButton'
 
-
 import './css/SearchBar.css'
 
 const SearchBar = (props) => {
+  const formClass = `search-bar ${(props.isTall)? "tall" : ""}`;
   return (
-    <form className="search-bar" onSubmit={props.handleSubmit}>
+    <form className={formClass} onSubmit={props.handleSubmit}>
       <InputBar value={props.value} inputClass={props.inputClass} handleInput={props.handleInput}/>
-      <IconButton submit={true} className={props.buttonClass}/>
+      <IconButton submit={true} className="search-bar-button"/>
     </form>
   );
-}
+};
 
 export default SearchBar;
 
@@ -21,5 +21,3 @@ const InputBar = (props) => {
     <input className={className} type="text" value={props.value} onChange={props.handleInput}/>
   );
 };
-
-

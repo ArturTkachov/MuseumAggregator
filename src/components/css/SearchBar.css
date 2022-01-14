@@ -1,12 +1,16 @@
-form.search-bar{
+.search-bar{
+    height: 40px;
     display:inline-flex;
     border-radius: 30px;
     background-color: #F7D490;
 }
 
+.search-bar.tall{
+    height: 48px;
+}
+
 .search-bar button{
     cursor:pointer;
-    background-color: #C23A4B;
     border-radius: 0 30px 30px 0;
 }
 
@@ -18,4 +22,34 @@ form.search-bar{
     outline: none;
     border-radius: 30px 0 0 30px;
     background-color: #F7D490;
+}
+
+.search-bar-button{
+    width: 44px;
+    height: 40px;
+    z-index: 900;
+    transition: all 0.3s ease-out;
+    background: #C23A4B url("../../assets/icons/white/searchWhite.svg") no-repeat 4px/32px;
+}
+
+.search-bar-button:hover{
+    width: 58px;
+    height: 40px;
+    border-radius: 30px;
+    background-position: 14px 4px;
+}
+
+.tall .search-bar-button{
+    width: 52px;
+    height: 48px;
+    z-index: 900;
+    transition: all 0.3s ease-out;
+    background: #C23A4B url("../../assets/icons/white/searchWhite.svg") no-repeat 6px/36px;
+}
+
+.tall .search-bar-button:hover{
+    width: 70px;
+    height:48px;
+    border-radius: 30px;
+    background-position: 17px 6px;
 }
