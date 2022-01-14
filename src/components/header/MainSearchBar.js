@@ -29,16 +29,14 @@ class MainSearchBar extends React.PureComponent{
 
   render() {
     return (
-        <SearchBar value={this.state.input}
-                   inputClass="main-sb-input"
-                   buttonClass="main-sb-button"
-                   handleInput={this.handleInput}
-                   handleSubmit={this.handleSubmit}
-        />
+      <SearchBar value={this.state.input}
+                 isTall={true}
+                 inputClass="main-sb-input"
+                 handleInput={this.handleInput}
+                 handleSubmit={this.handleSubmit}
+      />
     );
   }
 }
-
-
 
 export default MainSearchBar;

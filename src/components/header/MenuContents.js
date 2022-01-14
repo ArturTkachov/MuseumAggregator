@@ -6,12 +6,9 @@ import '../css/header/MenuCloseButton.css';
 
 const MenuCloseButton = (props) => {
   return (
-    <div>
-      <IconButton submit={false} className="menu-close-button" handleClick={props.handleClick}/>
-    </div>
+    <IconButton submit={false} className="menu-close-button" handleClick={props.handleClick}/>
   );
 };
-
 
 const MenuItem = (props) => {
   const text = props.text;

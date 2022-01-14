@@ -3,9 +3,9 @@
     height: 48px;
     cursor:pointer;
     transition: all 0.3s ease-out;
-    background: url("../../../assets/icons/white/xWhite.svg") no-repeat center/36px;
+    background: url("../../../assets/icons/white/xWhite.svg") no-repeat 6px/36px;
 }
 
 .menu-close-button:hover{
-    background: #C23A4B url("../../../assets/icons/yellow/xYellow.svg") no-repeat center;
+    background: #C23A4B url("../../../assets/icons/yellow/xYellow.svg") no-repeat 6px/36px;
 }
