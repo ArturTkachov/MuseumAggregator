@@ -9,3 +9,11 @@ body {
   font-family: "Comfortaa", sans-serif;
   background-color: #FEF6ED;
 }
+
+.border-top{
+  border-top: 2px solid #F7D490;
+}
+
+.border-bottom{
+  border-bottom: 2px solid #F7D490;
+}
