@@ -1,5 +1,5 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import IconButton from '../IconButton';
 
 import '../css/header/MenuCloseButton.css';
@@ -12,15 +12,14 @@ const MenuCloseButton = (props) => {
 
 const MenuItem = (props) => {
   const text = props.text;
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate(`${text.toLowerCase()}`);
-  };
 
-  return (<li className="menu-item" onClick={handleClick}>{text}</li>);
+  return (
+    <li className="menu-item">
+      <Link to={`${text.toLowerCase()}`}>{text}</Link>
+    </li>);
 };
 
-const MenuList = () => {
+const MenuList = React.memo(() => {
   const itemTexts = ["Home", "Collections", "Random", "Favourites", "Attribution"];
   const menuItems = itemTexts.map(
     text => <MenuItem key={text} text={text}/>
@@ -31,6 +30,6 @@ const MenuList = () => {
       <ul>{menuItems}</ul>
     </nav>
   );
-};
+});
 
 export {MenuCloseButton, MenuList};
