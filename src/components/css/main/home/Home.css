@@ -1,0 +1,19 @@
+#content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#content img{
+    width: 880px;
+}
+
+#floor{
+    height: 125px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #F7D490;
+}
