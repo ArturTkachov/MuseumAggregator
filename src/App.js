@@ -1,7 +1,7 @@
 import {Outlet} from 'react-router-dom';
 import './App.css';
 import MainSearchBar from './components/header/MainSearchBar';
-import MenuButton from './components/header/MenuButton'
+import MenuButton from './components/header/MenuButton';
 
 function App() {
   return (

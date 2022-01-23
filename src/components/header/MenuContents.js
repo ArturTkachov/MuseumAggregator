@@ -1,14 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import IconButton from '../IconButton';
+import {ColorName} from '../../types/ColorName';
+import iconSrc from '../../assets/icons/white/xWhite.svg';
 
-import '../css/header/MenuCloseButton.css';
-
-const MenuCloseButton = (props) => {
-  return (
-    <IconButton submit={false} className="menu-close-button" handleClick={props.handleClick}/>
-  );
-};
+const MenuCloseButton = (props) =>
+    <IconButton size="normal" src={iconSrc}
+                hoverIconColor={ColorName.Yellow}
+                handleClick={props.handleClick}/>;
 
 const MenuItem = (props) => {
   const text = props.text;

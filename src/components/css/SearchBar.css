@@ -1,20 +1,18 @@
 .search-bar{
-    height: 40px;
     display:inline-flex;
     border-radius: 30px;
     background-color: #F7D490;
 }
 
-.search-bar.tall{
+.search-bar.small{
+    height: 42px;
+}
+
+.search-bar.normal{
     height: 48px;
 }
 
-.search-bar button{
-    cursor:pointer;
-    border-radius: 0 30px 30px 0;
-}
-
-.input-bar{
+.search-bar input{
     color: #FEF6ED;
     font: 16px Comfortaa;
     padding: 0 0 0 20px;
@@ -24,32 +22,45 @@
     background-color: #F7D490;
 }
 
-.search-bar-button{
-    width: 44px;
-    height: 40px;
+.search-bar.small input{
+    width: 220px;
+}
+
+.search-bar.normal input{
+    width: 400px;
+}
+
+.search-bar button{
+    border:none;
+    padding: 0;
+    margin: 0;
+    cursor:pointer;
+    width: 46px;
+    height: 42px;
+    border-radius: 0 30px 30px 0;
     z-index: 900;
     transition: all 0.3s ease-out;
-    background: #C23A4B url("../../assets/icons/white/searchWhite.svg") no-repeat 4px/32px;
+    background: #C23A4B url("../../assets/icons/white/searchWhite.svg") no-repeat 5px/32px;
 }
 
-.search-bar-button:hover{
-    width: 58px;
-    height: 40px;
+.search-bar button:hover{
     border-radius: 30px;
-    background-position: 14px 4px;
 }
 
-.tall .search-bar-button{
+.search-bar.small button:hover{
+    width: 60px;
+    height: 42px;
+    background-position: 15px 5px;
+}
+
+.search-bar.normal button{
     width: 52px;
     height: 48px;
-    z-index: 900;
-    transition: all 0.3s ease-out;
     background: #C23A4B url("../../assets/icons/white/searchWhite.svg") no-repeat 6px/36px;
 }
 
-.tall .search-bar-button:hover{
+.search-bar.normal button:hover{
     width: 70px;
     height:48px;
-    border-radius: 30px;
     background-position: 17px 6px;
 }

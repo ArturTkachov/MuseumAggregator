@@ -12,6 +12,10 @@
     background-color: #C23A4B;
 }
 
+#menu button:first-of-type{
+    align-self: flex-start;
+}
+
 #menu nav{
     width: calc(100% - 48px);
     background-color: #FEF6ED;

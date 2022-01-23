@@ -1,40 +1,35 @@
 import React from 'react';
-import SearchBar from '../../components/SearchBar';
-
-import '../css/header/MainSearchBar.css'
+import SearchBar from '../SearchBar';
 
 class MainSearchBar extends React.PureComponent{
   constructor(props) {
     super(props);
     this.state = {
-      input: "",
+      value: "",
     };
 
-    this.handleInput = this.handleInput.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleInput(e){
+  handleChange(e){
     this.setState({
-      input: e.target.value,
+      value: e.target.value,
     });
   }
 
   handleSubmit(e){
     e.preventDefault();
     this.setState({
-      input: "",
+      value: "",
     });
   }
 
   render() {
     return (
-      <SearchBar value={this.state.input}
-                 isTall={true}
-                 inputClass="main-sb-input"
-                 handleInput={this.handleInput}
-                 handleSubmit={this.handleSubmit}
-      />
+      <SearchBar size="normal" value={this.state.value}
+                 handleChange={this.handleChange}
+                 handleSubmit={this.handleSubmit}/>
     );
   }
 }
