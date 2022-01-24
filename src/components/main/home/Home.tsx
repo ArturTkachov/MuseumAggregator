@@ -4,8 +4,7 @@ import TryNowButton from './TryNowButton';
 import src from '../../../assets/svg/ManWithLaptop.svg';
 import '../../css/main/home/Home.css';
 
-const Home = () => {
-  return (
+const Home = () => (
     <main>
       <PageDescription pageType={PageType.Home}/>
       <div id="content">
@@ -14,7 +13,6 @@ const Home = () => {
       </div>
       <div id="floor"/>
     </main>
-  );
-};
+);
 
 export default Home;
