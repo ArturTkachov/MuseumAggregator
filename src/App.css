@@ -3,15 +3,15 @@
 }
 
 header{
-    height: 48px;
-    margin-top: 20px;
+    height: 3rem;
+    margin-top: 1.25rem;
     display:flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 #name{
-    font: bold 36px/48px Comfortaa;
+    font: bold 2.25rem/3rem Comfortaa;
     letter-spacing: 1px;
 }
 
@@ -19,13 +19,9 @@ header{
     display: flex;
 }
 
-#right-panel .search-bar{
-    margin-right: 25px;
-}
-
 @media screen and (max-width: 480px){
     #wrapper{
-        width: 98%;
+        width: calc(100% - 1rem);
     }
 
     #name{
@@ -34,14 +30,23 @@ header{
 
     #right-panel{
         width: 100%;
-        padding: 0 4%;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px){
     #wrapper{
         width: 90%;
+    }
+
+    #right-panel .search-bar{
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 769px){
+    #right-panel .search-bar{
+        margin-right: 1.5625rem;
     }
 }
 
