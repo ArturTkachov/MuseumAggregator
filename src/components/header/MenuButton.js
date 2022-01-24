@@ -1,10 +1,9 @@
 import React from 'react';
-
 import IconButton from '../IconButton';
-import Menu from "./Menu";
+import {ColorName} from '../../types/ColorName';
+import iconSrc from '../../assets/icons/red/menuRed.svg';
+import Menu from './Menu';
 import {MenuCloseButton, MenuList} from './MenuContents';
-
-import '../css/header/MenuButton.css'
 
 class MenuButton extends React.PureComponent{
   constructor(props) {
@@ -33,8 +32,10 @@ class MenuButton extends React.PureComponent{
     const isOpen = this.state.isOpen;
     return(
       <>
-        <IconButton submit={false} handleClick={this.handleClick}
-                    className="menu-button"/>
+        <IconButton size="normal" src={iconSrc}
+                    hoverIconColor={ColorName.White}
+                    hoverBackgroundColor={ColorName.Red}
+                    handleClick={this.handleClick}/>
 
         <Menu isOpen={isOpen} handleOutsideClick={this.handleOutsideClick}>
           <MenuCloseButton handleClick={this.handleClick}/>

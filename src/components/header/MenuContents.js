@@ -1,26 +1,24 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import IconButton from '../IconButton';
+import {ColorName} from '../../types/ColorName';
+import iconSrc from '../../assets/icons/white/xWhite.svg';
 
-import '../css/header/MenuCloseButton.css';
-
-const MenuCloseButton = (props) => {
-  return (
-    <IconButton submit={false} className="menu-close-button" handleClick={props.handleClick}/>
-  );
-};
+const MenuCloseButton = (props) =>
+    <IconButton size="normal" src={iconSrc}
+                hoverIconColor={ColorName.Yellow}
+                handleClick={props.handleClick}/>;
 
 const MenuItem = (props) => {
   const text = props.text;
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate(`${text.toLowerCase()}`);
-  };
 
-  return (<li className="menu-item" onClick={handleClick}>{text}</li>);
+  return (
+    <li className="menu-item">
+      <Link to={`${text.toLowerCase()}`}>{text}</Link>
+    </li>);
 };
 
-const MenuList = () => {
+const MenuList = React.memo(() => {
   const itemTexts = ["Home", "Collections", "Random", "Favourites", "Attribution"];
   const menuItems = itemTexts.map(
     text => <MenuItem key={text} text={text}/>
@@ -31,6 +29,6 @@ const MenuList = () => {
       <ul>{menuItems}</ul>
     </nav>
   );
-};
+});
 
 export {MenuCloseButton, MenuList};
