@@ -1,5 +1,4 @@
 #wrapper{
-    width: 70%;
     margin: 0 auto;
 }
 
@@ -22,4 +21,38 @@ header{
 
 #right-panel .search-bar{
     margin-right: 25px;
+}
+
+@media screen and (max-width: 480px){
+    #wrapper{
+        width: 98%;
+    }
+
+    #name{
+        display: none;
+    }
+
+    #right-panel{
+        width: 100%;
+        padding: 0 4%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    #wrapper{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    #wrapper{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1201px){
+    #wrapper{
+        width: 70%;
+    }
 }
