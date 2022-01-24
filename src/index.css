@@ -3,6 +3,10 @@
   src: local('Comfortaa'), url(./assets/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf) format('opentype');
 }
 
+html{
+  font-size: 16px;
+}
+
 body {
   color: #C23A4B;
   margin: 0;
@@ -16,4 +20,16 @@ body {
 
 .border-bottom{
   border-bottom: 2px solid #F7D490;
+}
+
+@media screen and (max-width: 480px){
+  html{
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  html{
+    font-size: 24px;
+  }
 }
