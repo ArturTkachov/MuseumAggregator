@@ -22,14 +22,6 @@
     background-color: #F7D490;
 }
 
-.search-bar.small input{
-    width: 14rem;
-}
-
-.search-bar.normal input{
-    width: 25rem;
-}
-
 .search-bar button{
     border:none;
     padding: 0;
@@ -53,35 +45,33 @@
 
 @media screen and (max-width: 480px){
     .search-bar.small input{
-        width: 6rem;
+        width: 34vw;
     }
 
     .search-bar.normal input{
-        width: 9rem;
+        width: 42vw;
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px){
+@media screen and (min-width: 481px) and (max-width: 768px) {
     .search-bar.small input{
-        width: 8rem;
+        width: 25vw;
     }
 
     .search-bar.normal input{
-        width: 12rem;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1200px){
-    .search-bar.small input{
-        width: 9.5rem;
-    }
-
-    .search-bar.normal input{
-        width: 18.5rem;
+        width: 30vw;
     }
 }
 
 @media screen and (min-width: 769px) {
+    .search-bar.small input{
+        width: 16vw;
+    }
+
+    .search-bar.normal input{
+        width: 20vw;
+    }
+
     .search-bar button:hover{
         border-radius: 1.875rem;
     }
