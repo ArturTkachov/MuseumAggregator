@@ -11,27 +11,53 @@
 }
 
 .red-button:hover{
-    color: #fef6ed;
     background-color: #7c1a33;
 }
 
-.red-button.small{
-    width: 180px;
-    font-size: 24px;
-    border-radius: 20px;
-    padding: calc((180px / 2.5 - 24px) / 2) 0;
+@media screen and (max-width: 1439px) {
+    .red-button.small{
+        width: 7rem;
+        font-size: 1rem;
+        border-radius: 0.8rem;
+        padding: calc((7rem / 2.5 - 1em) / 2) 0;
+    }
+
+    .red-button.normal{
+        width: 10rem;
+        font-size: 1.25rem;
+        border-radius: 1.2rem;
+        padding: calc((10rem / 2.5 - 1em) / 2) 0;
+    }
+
+    .red-button.big{
+        width: 13rem;
+        font-size: 1.5rem;
+        border-radius: 1.6rem;
+        padding: calc((13rem / 2.5 - 1em) / 2) 0;
+    }
+
 }
 
-.red-button.normal{
-    width: 250px;
-    font-size: 28px;
-    border-radius: 30px;
-    padding: calc((250px / 2.5 - 28px) / 2) 0;
-}
+@media screen and (min-width: 1440px) {
+    .red-button.small{
+        width: 9rem;
+        font-size: 1.2rem;
+        border-radius: 1.1rem;
+        padding: calc((9rem / 2.5 - 1em) / 2) 0;
+    }
 
-.red-button.big{
-    width: 300px;
-    font-size: 36px;
-    border-radius: 40px;
-    padding: calc((300px/ 2.5 - 36px) / 2) 0;
+    .red-button.normal{
+        width: 12rem;
+        font-size: 1.5rem;
+        border-radius: 1.5rem;
+        padding: calc((12rem / 2.5 - 1em) / 2) 0;
+    }
+
+    .red-button.big{
+        width: 15rem;
+        font-size: 2rem;
+        border-radius: 1.9rem;
+        padding: calc((15rem / 2.5 - 1em) / 2) 0;
+    }
+
 }
