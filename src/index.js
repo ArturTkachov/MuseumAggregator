@@ -4,14 +4,15 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Home from "./components/main/home/Home";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Routes>
         <Route path="MuseumAggregator" element={<App/>}>
-          <Route index element={<p>Home</p>}/>
-          <Route path="home" element={<p>Home</p>}/>
+          <Route index element={<Home/>}/>
+          <Route path="home" element={<Home/>}/>
           <Route path="collections" element={<p>Collections</p>}/>
           <Route path="random" element={<p>Random</p>}/>
           <Route path="favourites" element={<p>Favourites</p>}/>

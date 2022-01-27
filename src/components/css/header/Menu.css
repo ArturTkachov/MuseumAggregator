@@ -17,7 +17,7 @@
 }
 
 #menu nav{
-    width: calc(100% - 48px);
+    width: calc(100% - 3rem);
     background-color: #FEF6ED;
 }
 
@@ -32,11 +32,11 @@
 .menu-item a{
     display: block;
     color: #c23a4b;
-    font-size: 30px;
-    line-height: 48px;
+    font-size: 2rem;
+    line-height: 3rem;
     text-decoration: none;
     cursor:pointer;
-    padding-left: 15px;
+    padding-left: 1rem;
     transition: background-color 0.6s ease-out;
 }
 

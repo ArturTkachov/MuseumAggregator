@@ -1,18 +1,16 @@
 #wrapper{
-    width: 70%;
     margin: 0 auto;
 }
 
 header{
-    height: 48px;
-    margin-top: 20px;
+    height: 3rem;
+    margin: 1.25rem 0;
     display:flex;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
 #name{
-    font: bold 36px/48px Comfortaa;
+    font: bold 2.25rem/3rem Comfortaa;
     letter-spacing: 1px;
 }
 
@@ -20,6 +18,45 @@ header{
     display: flex;
 }
 
-#right-panel .search-bar{
-    margin-right: 25px;
+@media screen and (max-width: 480px){
+    #wrapper{
+        width: calc(100% - 1rem);
+    }
+
+    #name{
+        display: none;
+    }
+
+    #right-panel{
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    #wrapper{
+        width: 90%;
+    }
+
+    #right-panel .search-bar{
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 769px){
+    #right-panel .search-bar{
+        margin-right: 1.5625rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    #wrapper{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1201px){
+    #wrapper{
+        width: 70%;
+    }
 }

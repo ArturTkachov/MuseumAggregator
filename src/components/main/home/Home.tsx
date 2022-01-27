@@ -11,7 +11,6 @@ const Home = () => (
         <TryNowButton/>
         <img src={src} alt="Man sitting with a laptop"/>
       </div>
-      <div id="floor"/>
     </main>
 );
 
