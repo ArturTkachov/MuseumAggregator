@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import {PageType} from '../../types/PageType';
-import '../css/main/PageDescription.css'
+import {PageType} from '../types/PageType';
+import '../components/css/PageDescription.css'
 
 interface Props{
   pageType: PageType;
@@ -11,7 +11,7 @@ const PageDescription:FC<Props> = (props) => {
     home: {
       heading: "Explore the world of art",
       description:
-        "Nomen is a website wich helps you learn a bit more about diverse " +
+        "Nomen is a website which helps you learn a bit more about diverse " +
         "cultures of humanity by providing a simple way of browsing pieces " +
         "of art from all around the world."
     },
