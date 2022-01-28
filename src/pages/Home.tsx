@@ -1,6 +1,6 @@
 import PageDescription from '../components/PageDescription';
 import { PageType } from '../types/PageType';
-import TryNowButton from '../components/main/home/TryNowButton';
+import TryNowButton from '../components/home/TryNowButton';
 import src from '../assets/svg/ManWithLaptop.svg';
 import '../pages/css/Home.css';
 

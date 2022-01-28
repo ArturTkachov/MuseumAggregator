@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import RedButton from '../../RedButton';
+import RedButton from '../../components/RedButton';
 
 const TryNowButton = () => {
   const navigate = useNavigate();
