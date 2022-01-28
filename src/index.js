@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Home from "./components/main/home/Home";
+import Home from "./pages/Home";
 
 ReactDOM.render(
   <React.StrictMode>
