@@ -1,8 +1,8 @@
-import PageDescription from '../components/main/PageDescription';
+import PageDescription from '../components/PageDescription';
 import { PageType } from '../types/PageType';
 import TryNowButton from '../components/main/home/TryNowButton';
-import src from 'src/assets/svg/ManWithLaptop.svg';
-import 'src/pages/css/Home.css';
+import src from '../assets/svg/ManWithLaptop.svg';
+import '../pages/css/Home.css';
 
 const Home = () => (
     <main>
