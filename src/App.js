@@ -13,9 +13,9 @@ function App() {
           <MenuButton/>
         </div>
       </header>
-
-      <Outlet/>
-
+      <main>
+        <Outlet/>
+      </main>
     </div>
   );
 }
