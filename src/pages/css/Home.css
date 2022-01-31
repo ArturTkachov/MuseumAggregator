@@ -2,27 +2,56 @@ body {
     background: #fef6ed url("../../assets/jpeg/Floor.jpg") no-repeat bottom left;
 }
 
-main{
+#home{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    min-height: calc(100vh - 5.5rem);
 }
 
-#content{
+#home-content{
     display: flex;
     align-items: center;
+    flex-grow: 0.15;
 }
 
 @media screen and (max-width: 480px) {
-    #content{
-        height: 50vh;
+    #home-content{
         padding-top: 1rem;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    #content img{
+    #home-content img{
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 481px) and (orientation: portrait) {
+    #home-content{
+        flex-direction: column;
+    }
+
+    #home-content img{
+        width: 100%;
+    }
+
+    body {
+        background-size: 100vw 16vh;
+    }
+}
+
+@media screen and (min-width: 481px) and (orientation: landscape){
+    #home-content{
+        justify-content: space-around;
+    }
+
+    #home-content img{
+        width: 65%;
+    }
+
+    body {
+        background-size: 100vw 14vh;
     }
 }
 
@@ -43,39 +72,3 @@ main{
         background-size: 100vw 20vh;
     }
 }
-
-@media screen and (min-width: 481px) and (orientation: portrait) {
-    #content{
-        flex-direction: column;
-    }
-
-    #content img{
-        width: 100%;
-    }
-
-    body {
-        background-size: 100vw 16vh;
-    }
-}
-
-@media screen and (min-width: 481px) and (orientation: landscape){
-    #content{
-        justify-content: space-around;
-    }
-
-    #content img{
-        width: 65%;
-    }
-
-    body {
-        background-size: 100vw 14vh;
-    }
-}
-
-@media screen and (orientation: portrait),
-(min-width: 481px) and (min-height: 481px) and (orientation: landscape){
-    main{
-        height: calc(100vh - 5.5rem);
-    }
-}
-
