@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "/MuseumAggregator/static/css/main.114462bd.chunk.css",
-    "main.js": "/MuseumAggregator/static/js/main.8613482c.chunk.js",
-    "main.js.map": "/MuseumAggregator/static/js/main.8613482c.chunk.js.map",
-    "runtime-main.js": "/MuseumAggregator/static/js/runtime-main.d061f965.js",
-    "runtime-main.js.map": "/MuseumAggregator/static/js/runtime-main.d061f965.js.map",
-    "static/js/2.ed24ee6b.chunk.js": "/MuseumAggregator/static/js/2.ed24ee6b.chunk.js",
-    "static/js/2.ed24ee6b.chunk.js.map": "/MuseumAggregator/static/js/2.ed24ee6b.chunk.js.map",
-    "static/js/3.994c15a9.chunk.js": "/MuseumAggregator/static/js/3.994c15a9.chunk.js",
-    "static/js/3.994c15a9.chunk.js.map": "/MuseumAggregator/static/js/3.994c15a9.chunk.js.map",
+    "main.css": "/MuseumAggregator/static/css/main.d0028fbf.chunk.css",
+    "main.js": "/MuseumAggregator/static/js/main.c2a9a3a4.chunk.js",
+    "main.js.map": "/MuseumAggregator/static/js/main.c2a9a3a4.chunk.js.map",
+    "runtime-main.js": "/MuseumAggregator/static/js/runtime-main.e19346bf.js",
+    "runtime-main.js.map": "/MuseumAggregator/static/js/runtime-main.e19346bf.js.map",
+    "static/js/2.5a50eb7f.chunk.js": "/MuseumAggregator/static/js/2.5a50eb7f.chunk.js",
+    "static/js/2.5a50eb7f.chunk.js.map": "/MuseumAggregator/static/js/2.5a50eb7f.chunk.js.map",
+    "static/js/3.749c5b61.chunk.js": "/MuseumAggregator/static/js/3.749c5b61.chunk.js",
+    "static/js/3.749c5b61.chunk.js.map": "/MuseumAggregator/static/js/3.749c5b61.chunk.js.map",
     "index.html": "/MuseumAggregator/index.html",
-    "static/css/main.114462bd.chunk.css.map": "/MuseumAggregator/static/css/main.114462bd.chunk.css.map",
-    "static/js/2.ed24ee6b.chunk.js.LICENSE.txt": "/MuseumAggregator/static/js/2.ed24ee6b.chunk.js.LICENSE.txt",
+    "static/css/main.d0028fbf.chunk.css.map": "/MuseumAggregator/static/css/main.d0028fbf.chunk.css.map",
+    "static/js/2.5a50eb7f.chunk.js.LICENSE.txt": "/MuseumAggregator/static/js/2.5a50eb7f.chunk.js.LICENSE.txt",
     "static/media/index.css": "/MuseumAggregator/static/media/Comfortaa-VariableFont_wght.42599e57.ttf",
-    "static/media/Home.css": "/MuseumAggregator/static/media/Floor.929ee951.jpg",
-    "static/media/ManWithLaptop.6a91ad9f.svg": "/MuseumAggregator/static/media/ManWithLaptop.6a91ad9f.svg",
+    "static/media/ManWithLaptop.eb7d58e1.svg": "/MuseumAggregator/static/media/ManWithLaptop.eb7d58e1.svg",
     "static/media/menuRed.c66de543.svg": "/MuseumAggregator/static/media/menuRed.c66de543.svg",
     "static/media/SearchBar.css": "/MuseumAggregator/static/media/searchWhite.94eb75b5.svg",
     "static/media/xWhite.a7b0b718.svg": "/MuseumAggregator/static/media/xWhite.a7b0b718.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d061f965.js",
-    "static/js/2.ed24ee6b.chunk.js",
-    "static/css/main.114462bd.chunk.css",
-    "static/js/main.8613482c.chunk.js"
+    "static/js/runtime-main.e19346bf.js",
+    "static/js/2.5a50eb7f.chunk.js",
+    "static/css/main.d0028fbf.chunk.css",
+    "static/js/main.c2a9a3a4.chunk.js"
   ]
 }
