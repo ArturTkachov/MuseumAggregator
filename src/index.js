@@ -6,6 +6,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from './pages/Home';
 
+const Collections = React.lazy(() => import('./pages/Collections'));
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -13,7 +15,11 @@ ReactDOM.render(
         <Route path="MuseumAggregator" element={<App/>}>
           <Route index element={<Home/>}/>
           <Route path="home" element={<Home/>}/>
-          <Route path="collections" element={<p>Collections</p>}/>
+          <Route path="collections" element={
+            <React.Suspense fallback={<>...</>}>
+              <Collections/>
+            </React.Suspense>
+          }/>
           <Route path="random" element={<p>Random</p>}/>
           <Route path="favourites" element={<p>Favourites</p>}/>
           <Route path="attribution" element={<p>Attribution</p>}/>
