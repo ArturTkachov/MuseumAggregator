@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './index.css';
 import App from './App';
+import {store} from './store';
+import {Provider} from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import Home from './pages/Home';
 
@@ -12,7 +14,11 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="MuseumAggregator" element={<App/>}>
+        <Route path="MuseumAggregator" element={
+          <Provider store={store}>
+            <App/>
+          </Provider>
+        }>
           <Route index element={<Home/>}/>
           <Route path="home" element={<Home/>}/>
           <Route path="collections" element={
