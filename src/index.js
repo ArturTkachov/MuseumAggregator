@@ -7,8 +7,10 @@ import {store} from './store';
 import {Provider} from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import Home from './pages/Home';
+import {CollectionType} from './types/CollectionType';
 
 const Collections = React.lazy(() => import('./pages/Collections'));
+const CollectionPage = React.lazy(() => import('./pages/CollectionPage'));
 
 ReactDOM.render(
   <React.StrictMode>
@@ -24,6 +26,11 @@ ReactDOM.render(
           <Route path="collections" element={
             <React.Suspense fallback={<>...</>}>
               <Collections/>
+            </React.Suspense>
+          }/>
+          <Route path="collections/asia" element={
+            <React.Suspense fallback={<>...</>}>
+              <CollectionPage collection={CollectionType.Asia}/>
             </React.Suspense>
           }/>
           <Route path="random" element={<p>Random</p>}/>

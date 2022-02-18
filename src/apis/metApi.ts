@@ -11,7 +11,7 @@ export const metApi = createApi({
     baseUrl: "https://collectionapi.metmuseum.org/public/collection/v1/",
   }),
   endpoints: (builder) => ({
-    getMetArtworksIDs: builder.query<number[], undefined>({
+    getMetArtworksIDs: builder.query<number[], void>({
       query: () => 'search?hasImages=true&q=""',
       transformResponse: extractIDsArray,
       keepUnusedDataFor: 600,
