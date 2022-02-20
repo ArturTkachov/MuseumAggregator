@@ -4,8 +4,7 @@ import './css/ArtworkPreviewInfo.css';
 interface Props {
   artworkName: string,
   artistName: string,
-  artworkBegin: number,
-  artworkEnd: number
+  artworkDate: string,
 }
 
 const ArtworkPreviewInfo: FC<Props> = (props) => {
@@ -13,7 +12,7 @@ const ArtworkPreviewInfo: FC<Props> = (props) => {
     <section className="preview-info">
       <h2>{props.artistName}</h2>
       <span>Artist: {props.artistName}</span>
-      <span>{props.artworkBegin} - {props.artworkEnd}</span>
+      <span>{props.artworkDate}</span>
     </section>
   )
 };
