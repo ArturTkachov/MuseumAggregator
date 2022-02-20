@@ -1,7 +1,8 @@
 import { CollectionType } from '../types/CollectionType';
 import { FC } from 'react';
 import { useGetMetDepartmentArtworksIDsQuery } from '../apis/metApi';
-import MetArtworkPreview from '../components/MetArtworkPreview';
+import ArtworkPreviewsList from '../components/preview/ArtworkPreviewsList';
+import { SpecifiedArtworkID } from '../types/SpecifiedArtworkID';
 
 interface Props {
   collection: CollectionType;
@@ -18,11 +19,11 @@ const CollectionPage: FC<Props> = (props) => {
 
   if (isLoading || !ids) return <div>Loading...</div>;
   return (
-    <>
-      {ids.slice(0, 5).map((id) => (
-        <MetArtworkPreview id={id} />
-      ))}
-    </>
+    <ArtworkPreviewsList
+      specifiedIDs={ids
+        .slice(0, 5)
+        .map((id): SpecifiedArtworkID => ({ source: 'met', id }))}
+    />
   );
 };
 

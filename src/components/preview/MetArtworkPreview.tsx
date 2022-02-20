@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { useGetMetArtworkByIDQuery } from '../apis/metApi';
-import ArtworkPreviewInfo from '../components/ArtworkPreviewInfo';
-import './css/ArtworkPreview.css';
+import { useGetMetArtworkByIDQuery } from '../../apis/metApi';
+import ArtworkPreviewInfo from '../../components/preview/ArtworkPreviewInfo';
+import '../css/preview/ArtworkPreview.css';
 
 interface Props {
   id: number;
@@ -13,7 +13,7 @@ const MetArtworkPreview: FC<Props> = (props) => {
   if (isLoading || !data) return <div>Loadig artwork...</div>;
   return (
     <li className="artwork-preview">
-      <img src={data.primaryImageSmall} alt="artwork image" />
+      <img src={data.primaryImageSmall} alt="artwork photo" />
       <ArtworkPreviewInfo
         artworkName={data.objectName}
         artistName={data.artistDisplayName}

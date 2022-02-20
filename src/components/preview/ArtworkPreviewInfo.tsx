@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import './css/ArtworkPreviewInfo.css';
+import '../css/preview/ArtworkPreviewInfo.css';
 
 interface Props {
-  artworkName: string,
-  artistName: string,
-  artworkDate: string,
+  artworkName: string;
+  artistName: string;
+  artworkDate: string;
 }
 
 const ArtworkPreviewInfo: FC<Props> = (props) => {
@@ -14,7 +14,7 @@ const ArtworkPreviewInfo: FC<Props> = (props) => {
       <span>Artist: {props.artistName}</span>
       <span>{props.artworkDate}</span>
     </section>
-  )
+  );
 };
 
 export default ArtworkPreviewInfo;
