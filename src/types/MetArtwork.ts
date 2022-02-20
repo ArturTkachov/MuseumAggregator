@@ -1,5 +1,7 @@
 export type MetArtwork = {
   objectID: number,
+  objectName: string,
+  objectDate:	string,
   isHighlight: boolean,
   primaryImage: string,
   primaryImageSmall: string,
@@ -7,7 +9,6 @@ export type MetArtwork = {
   department: Department,
   period: string,
   artistDisplayName: string,
-  objectDate: string
   country: string
   region: string
 }

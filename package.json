@@ -34,6 +34,9 @@
       "react-app/jest"
     ]
   },
+  "prettier": {
+    "singleQuote": true
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -47,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "prettier": "^2.5.1"
   }
 }

@@ -1,0 +1,40 @@
+.artwork-preview {
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 0.7rem;
+    display: flex;
+    transition: all 0.6s ease-out;
+}
+
+.artwork-preview:hover {
+    color: #fef6ed;
+    background-color: #c23a4b;
+}
+
+.artwork-preview img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+.artwork-preview .preview-info{
+    margin: auto;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+    .artwork-preview {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .artwork-preview img {
+        width: 45%;
+    }
+
+    .artwork-preview .preview-info{
+        width: 55%;
+        padding: 1rem;
+    }
+}

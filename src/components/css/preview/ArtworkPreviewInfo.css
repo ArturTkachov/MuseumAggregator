@@ -1,0 +1,11 @@
+.preview-info h2 {
+    line-height: 3rem;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.preview-info span {
+    display: block;
+    line-height: 1.5rem;
+}
