@@ -5,13 +5,19 @@ interface Props {
   artworkName: string;
   artistName: string;
   artworkDate: string;
+  artworkOrigin: string;
 }
 
 const ArtworkPreviewInfo: FC<Props> = (props) => {
   return (
     <section className="preview-info">
-      <h2>{props.artistName}</h2>
-      <span>Artist: {props.artistName}</span>
+      <h2>{props.artworkName}</h2>
+      <span>
+        Artist: {props.artistName ? props.artistName : 'Unknown artist'}
+      </span>
+      {props.artworkOrigin && (
+        <span>Place of origin: {props.artworkOrigin}</span>
+      )}
       <span>{props.artworkDate}</span>
     </section>
   );

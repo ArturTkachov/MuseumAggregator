@@ -18,6 +18,7 @@ const MetArtworkPreview: FC<Props> = (props) => {
         artworkName={data.objectName}
         artistName={data.artistDisplayName}
         artworkDate={data.objectDate}
+        artworkOrigin={data.country}
       />
     </li>
   );
