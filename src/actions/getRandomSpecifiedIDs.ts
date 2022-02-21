@@ -1,4 +1,5 @@
 import getRandomArrayElement from './getRandomArrayElement';
+import specifyID from './specifyID';
 import { DataSource, SpecifiedArtworkID } from '../types/SpecifiedArtworkID';
 
 const getRandomSpecifiedIDs = (
@@ -13,10 +14,8 @@ const getRandomSpecifiedIDs = (
   while (elements.length < amount) {
     if (iterations === maxIterations) break;
     iterations++;
-    const specID = {
-      source,
-      id: getRandomArrayElement(arr),
-    };
+    const id = getRandomArrayElement(arr);
+    const specID = specifyID(source, id);
     if (!containsSpecifiedID(specID, usedElements)) elements.push(specID);
   }
   return elements;
