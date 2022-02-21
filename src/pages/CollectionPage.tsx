@@ -1,29 +1,28 @@
 import { CollectionType } from '../types/CollectionType';
-import { FC } from 'react';
-import { useGetMetDepartmentArtworksIDsQuery } from '../apis/metApi';
+import { FC, useRef, useState } from 'react';
 import ArtworkPreviewsList from '../components/preview/ArtworkPreviewsList';
 import { SpecifiedArtworkID } from '../types/SpecifiedArtworkID';
+import useRandomSpecifiedCollectionIDs from '../hooks/useRandomSpecifiedCollectionIDs';
 
 interface Props {
   collection: CollectionType;
 }
 
 const CollectionPage: FC<Props> = (props) => {
-  const metDepartmentIDs = {
-    [CollectionType.Antiquity]: 13,
-    [CollectionType.Asia]: 6,
-    [CollectionType.MiddleAges]: 17,
-  };
-  const depID = metDepartmentIDs[props.collection];
-  const { data: ids, isLoading } = useGetMetDepartmentArtworksIDsQuery(depID);
+  const [length, setLength] = useState(5);
+  const idsRef = useRef<SpecifiedArtworkID[]>([]);
+  idsRef.current = useRandomSpecifiedCollectionIDs(
+    length - idsRef.current.length,
+    props.collection,
+    idsRef.current
+  );
 
-  if (isLoading || !ids) return <div>Loading...</div>;
+  if (!idsRef.current.length) return <div>Loading...</div>;
   return (
-    <ArtworkPreviewsList
-      specifiedIDs={ids
-        .slice(0, 5)
-        .map((id): SpecifiedArtworkID => ({ source: 'met', id }))}
-    />
+    <>
+      <ArtworkPreviewsList specifiedIDs={idsRef.current} />
+      <button onClick={() => setLength(length + 5)}>load more</button>
+    </>
   );
 };
 

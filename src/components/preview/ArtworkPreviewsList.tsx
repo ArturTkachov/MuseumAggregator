@@ -10,7 +10,11 @@ interface Props {
 const ArtworkPreviewsList: FC<Props> = (props) => (
   <ul id="previews-list">
     {props.specifiedIDs.map((specID) => (
-      <ArtworkPreviewProxy id={specID.id} source={specID.source} />
+      <ArtworkPreviewProxy
+        key={`${specID.id}${specID.source}`}
+        id={specID.id}
+        source={specID.source}
+      />
     ))}
   </ul>
 );

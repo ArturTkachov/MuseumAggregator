@@ -13,7 +13,7 @@ const MetArtworkPreview: FC<Props> = (props) => {
   if (isLoading || !data) return <div>Loadig artwork...</div>;
   return (
     <li className="artwork-preview">
-      <img src={data.primaryImageSmall} alt="artwork photo" />
+      <img src={data.primaryImageSmall} alt="artwork" />
       <ArtworkPreviewInfo
         artworkName={data.objectName}
         artistName={data.artistDisplayName}
