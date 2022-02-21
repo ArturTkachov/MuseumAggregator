@@ -1,6 +1,7 @@
-import { DataSource } from '../../types/SpecifiedArtworkID';
 import { FC } from 'react';
 import MetArtworkPreview from '../../components/preview/MetArtworkPreview';
+import { useNavigate } from 'react-router-dom';
+import { DataSource } from '../../types/SpecifiedArtworkID';
 
 interface Props {
   source: DataSource;
@@ -13,7 +14,10 @@ const ArtworkPreviewProxy: FC<Props> = (props) => {
   };
   const CurrentPreview = previews[props.source];
 
-  return <CurrentPreview id={props.id} />;
+  const navigate = useNavigate();
+  const handleClick = () => navigate(`../${props.source}/${props.id}`);
+
+  return <CurrentPreview id={props.id} handleClick={handleClick} />;
 };
 
 export default ArtworkPreviewProxy;
