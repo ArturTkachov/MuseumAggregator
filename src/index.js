@@ -11,6 +11,7 @@ import { CollectionType } from './types/CollectionType';
 
 const Collections = React.lazy(() => import('./pages/Collections'));
 const CollectionPage = React.lazy(() => import('./pages/CollectionPage'));
+const ArtworkPageProxy = React.lazy(() => import('./pages/ArtworkPageProxy'));
 
 ReactDOM.render(
   <React.StrictMode>
@@ -55,6 +56,14 @@ ReactDOM.render(
             element={
               <React.Suspense fallback={<>...</>}>
                 <CollectionPage collection={CollectionType.MiddleAges} />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path=":source/:id"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <ArtworkPageProxy />
               </React.Suspense>
             }
           />
