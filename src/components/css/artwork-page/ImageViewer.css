@@ -1,0 +1,35 @@
+#image-viewer > img {
+  display: block;
+  max-width: 60%;
+  margin: 0 auto 1rem;
+  transition: opacity 0.4s ease-out;
+}
+
+#image-viewer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#image-viewer li {
+  cursor: pointer;
+  max-width: 10%;
+  opacity: 0.6;
+  transition: opacity 0.4s ease-out;
+}
+
+#image-viewer li.active {
+  opacity: 1;
+}
+
+#image-viewer li:not(:last-of-type) {
+  margin-right: 0.5rem;
+}
+
+#image-viewer li img {
+  width: 100%;
+}

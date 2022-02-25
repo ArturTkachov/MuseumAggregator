@@ -5,6 +5,7 @@ import '../css/preview/ArtworkPreview.css';
 
 interface Props {
   id: number;
+  handleClick: () => void;
 }
 
 const MetArtworkPreview: FC<Props> = (props) => {
@@ -12,12 +13,14 @@ const MetArtworkPreview: FC<Props> = (props) => {
 
   if (isLoading || !data) return <div>Loadig artwork...</div>;
   return (
-    <li className="artwork-preview">
-      <img src={data.primaryImageSmall} alt="artwork photo" />
+    <li className="artwork-preview" onClick={props.handleClick}>
+      <img src={data.primaryImageSmall} alt="artwork" />
       <ArtworkPreviewInfo
-        artworkName={data.objectName}
+        artworkName={data.title}
+        artworkType={data.objectName}
         artistName={data.artistDisplayName}
         artworkDate={data.objectDate}
+        artworkOrigin={data.country}
       />
     </li>
   );
