@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 import { PageParams } from '../../types/PageParams';
 import { useGetMetArtworkByIDQuery } from '../../apis/metApi';
+import PageTitle from '../../components/PageTitle';
 import ImageViewer from './ImageViewer';
 
 const MetArtworkPage: FC = () => {
@@ -9,7 +10,12 @@ const MetArtworkPage: FC = () => {
   const { data, isLoading } = useGetMetArtworkByIDQuery(Number(id));
 
   if (isLoading || !data) return <div>Loading page...</div>;
-  return <ImageViewer images={[data.primaryImage, ...data.additionalImages]} />;
+  return (
+    <>
+      <PageTitle text={data.title} underlined={true} />
+      <ImageViewer images={[data.primaryImage, ...data.additionalImages]} />
+    </>
+  );
 };
 
 export default MetArtworkPage;
