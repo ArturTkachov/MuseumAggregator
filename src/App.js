@@ -1,4 +1,4 @@
-import {Outlet} from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import './App.css';
 import MainSearchBar from './components/header/MainSearchBar';
 import MenuButton from './components/header/MenuButton';
@@ -9,12 +9,12 @@ function App() {
       <header>
         <span id="name">Nomen</span>
         <div id="right-panel">
-          <MainSearchBar/>
-          <MenuButton/>
+          <MainSearchBar />
+          <MenuButton />
         </div>
       </header>
       <main>
-        <Outlet/>
+        <Outlet />
       </main>
     </div>
   );
