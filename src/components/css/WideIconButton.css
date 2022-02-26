@@ -1,0 +1,50 @@
+.wide-icon-button{
+    width: 100%;
+    height: 6rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 0;
+    margin: 0;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.wide-icon-button img{
+    display: block;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: auto;
+}
+
+.wide-icon-button.bg-white{
+    background-color: #fef6ed;
+}
+
+.wide-icon-button.bg-yellow{
+    background-color: #f7d490;
+}
+
+.wide-icon-button.bg-red{
+    background-color: #c23a4b;
+}
+
+.wide-icon-button.bg-dark-red{
+    background-color: #7c1a33;
+}
+
+.wide-icon-button.bg-hover-white:hover{
+    background-color: #fef6ed;
+}
+
+.wide-icon-button.bg-hover-yellow:hover{
+    background-color: #f7d490;
+}
+
+.wide-icon-button.bg-hover-red:hover{
+    background-color: #c23a4b;
+}
+
+.wide-icon-button.bg-hover-dark-red:hover{
+    background-color: #7c1a33;
+}
