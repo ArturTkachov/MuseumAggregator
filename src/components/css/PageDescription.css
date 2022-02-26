@@ -8,11 +8,6 @@
 }
 
 @media screen and (max-width: 480px) {
-    #page-description h1{
-        font: normal 2rem Comfortaa;
-        margin: 0 0 0.5rem;
-    }
-
     #page-description p{
         font: 1rem Comfortaa;
         padding: 0.5rem;
@@ -20,11 +15,6 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 1199px) {
-    #page-description h1{
-        font: normal 2rem Comfortaa;
-        margin: 0 0 1rem;
-    }
-
     #page-description p{
         font-size: 1rem;
         padding: 1rem 8%;
@@ -32,11 +22,6 @@
 }
 
 @media screen and (min-width: 1200px){
-    #page-description h1{
-        font: normal 3rem Comfortaa;
-        margin: 0 0 1rem;
-    }
-
     #page-description p{
         font-size: 1.5rem;
         padding: 1rem 10%;

@@ -1,5 +1,6 @@
 @font-face {
   font-family: "Comfortaa";
+  font-display: swap;
   src: local("Comfortaa"),
     url(./assets/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf)
       format("opentype");
