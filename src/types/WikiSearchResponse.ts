@@ -1,9 +1,9 @@
 export type WikiSearchResponse = {
   batchcomplete: string;
   query: {
+    search: WikiSearchItem[];
     searchinfo: {
       totalhints: number;
-      search: WikiSearchItem[];
     };
   };
 };
