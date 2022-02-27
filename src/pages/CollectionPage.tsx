@@ -3,6 +3,10 @@ import { FC, useRef, useState } from 'react';
 import ArtworkPreviewsList from '../components/preview/ArtworkPreviewsList';
 import { SpecifiedArtworkID } from '../types/SpecifiedArtworkID';
 import useRandomSpecifiedCollectionIDs from '../hooks/useRandomSpecifiedCollectionIDs';
+import WideIconButton from '../components/WideIconButton';
+import loadMoreSrc from '../assets/icons/white/chevronDownWhite.svg';
+import { ColorName } from '../types/ColorName';
+import './css/CollectionPage.css';
 
 interface Props {
   collection: CollectionType;
@@ -19,10 +23,15 @@ const CollectionPage: FC<Props> = (props) => {
 
   if (!idsRef.current.length) return <div>Loading...</div>;
   return (
-    <>
+    <div id="collection-page">
       <ArtworkPreviewsList specifiedIDs={idsRef.current} />
-      <button onClick={() => setLength(length + 5)}>load more</button>
-    </>
+      <WideIconButton
+        src={loadMoreSrc}
+        backgroundColor={ColorName.Yellow}
+        hoverBackgroundColor={ColorName.Red}
+        handleClick={() => setLength(length + 5)}
+      />
+    </div>
   );
 };
 

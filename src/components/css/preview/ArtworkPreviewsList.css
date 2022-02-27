@@ -4,6 +4,6 @@
     list-style: none;
 }
 
-#previews-list .artwork-preview {
+#previews-list .artwork-preview, #previews-list .loading-artwork-preview {
     margin-bottom: 0.5rem;
 }
