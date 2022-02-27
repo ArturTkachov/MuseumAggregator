@@ -24,6 +24,7 @@ const favouritesSlice = createSlice({
       const index = findSpecifiedID(action.payload, state);
       if (index === -1) return;
       state.splice(index, 1);
+      localStorage.setItem('favourites', JSON.stringify(state));
     },
   },
 });
