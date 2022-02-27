@@ -21,13 +21,27 @@ const getRandomSpecifiedIDs = (
   return elements;
 };
 
-const containsSpecifiedID = (
+export const specifiedIDsAreEqual = (
+  a: SpecifiedArtworkID,
+  b: SpecifiedArtworkID
+): boolean => a.source === b.source && a.id === b.id;
+
+export const containsSpecifiedID = (
   specID: SpecifiedArtworkID,
   arr: SpecifiedArtworkID[]
 ): boolean => {
   for (let i = 0; i < arr.length; i++)
-    if (specID.source === arr[i].source && specID.id === arr[i].id) return true;
+    if (specifiedIDsAreEqual(specID, arr[i])) return true;
   return false;
+};
+
+export const findSpecifiedID = (
+  specID: SpecifiedArtworkID,
+  arr: SpecifiedArtworkID[]
+): number => {
+  for (let i = 0; i < arr.length; i++)
+    if (specifiedIDsAreEqual(arr[i], specID)) return i;
+  return -1;
 };
 
 export default getRandomSpecifiedIDs;

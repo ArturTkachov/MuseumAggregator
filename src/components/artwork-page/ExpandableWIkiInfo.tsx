@@ -17,7 +17,8 @@ const ExpandableWIkiInfo: FC<Props> = (props) => {
     skip: !isOpen,
   });
 
-  const id = searchValues ? searchValues[0].pageid : null;
+  const id =
+    searchValues && searchValues.length ? searchValues[0].pageid : null;
   const { data: page } = useGetWikiPageByIDQuery(Number(id), {
     skip: !Boolean(id),
   });
