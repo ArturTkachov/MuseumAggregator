@@ -21,7 +21,7 @@ const getRandomSpecifiedIDs = (
   return elements;
 };
 
-const containsSpecifiedID = (
+export const containsSpecifiedID = (
   specID: SpecifiedArtworkID,
   arr: SpecifiedArtworkID[]
 ): boolean => {
