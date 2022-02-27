@@ -4,6 +4,7 @@ import { PageParams } from '../../types/PageParams';
 import { useGetMetArtworkByIDQuery } from '../../apis/metApi';
 import PageTitle from '../../components/PageTitle';
 import ImageViewer from './ImageViewer';
+import ExpandableWIkiInfo from './ExpandableWIkiInfo';
 
 import ArtworkPreviewInfo from '../../components/preview/ArtworkPreviewInfo';
 
@@ -22,6 +23,10 @@ const MetArtworkPage: FC = () => {
         artworkDate={data.objectDate}
         artworkOrigin={data.country}
       />
+      <ExpandableWIkiInfo text="Artwork wiki" query={data.title} />
+      {data.artistDisplayName && (
+        <ExpandableWIkiInfo text="Artist wiki" query={data.artistDisplayName} />
+      )}
     </>
   );
 };
