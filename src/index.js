@@ -11,6 +11,7 @@ import { CollectionType } from './types/CollectionType';
 
 const Collections = React.lazy(() => import('./pages/Collections'));
 const CollectionPage = React.lazy(() => import('./pages/CollectionPage'));
+const Favourites = React.lazy(() => import('./pages/Favourites'));
 const ArtworkPageProxy = React.lazy(() => import('./pages/ArtworkPageProxy'));
 
 ReactDOM.render(
@@ -68,7 +69,14 @@ ReactDOM.render(
             }
           />
           <Route path="random" element={<p>Random</p>} />
-          <Route path="favourites" element={<p>Favourites</p>} />
+          <Route
+            path="favourites"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <Favourites />
+              </React.Suspense>
+            }
+          />
           <Route path="attribution" element={<p>Attribution</p>} />
           <Route path="*" element={<p>Not found</p>} />
         </Route>

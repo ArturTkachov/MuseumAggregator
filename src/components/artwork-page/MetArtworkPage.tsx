@@ -7,6 +7,8 @@ import ImageViewer from './ImageViewer';
 import ExpandableWIkiInfo from './ExpandableWIkiInfo';
 
 import ArtworkPreviewInfo from '../../components/preview/ArtworkPreviewInfo';
+import FavouriteButton from '../../components/FavouriteButton';
+import specifyID from '../../actions/specifyID';
 
 const MetArtworkPage: FC = () => {
   const { id } = useParams<PageParams>();
@@ -23,6 +25,7 @@ const MetArtworkPage: FC = () => {
         artworkDate={data.objectDate}
         artworkOrigin={data.country}
       />
+      <FavouriteButton specID={specifyID('met', Number(id))} />
       <ExpandableWIkiInfo text="Artwork wiki" query={data.title} />
       {data.artistDisplayName && (
         <ExpandableWIkiInfo text="Artist wiki" query={data.artistDisplayName} />
