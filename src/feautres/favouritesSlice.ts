@@ -1,5 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { containsSpecifiedID } from '../actions/getRandomSpecifiedIDs';
+import {
+  containsSpecifiedID,
+  findSpecifiedID,
+} from '../actions/getRandomSpecifiedIDs';
 import { SpecifiedArtworkID } from '../types/SpecifiedArtworkID';
 
 const favourites = localStorage.getItem('favourites');
@@ -17,8 +20,13 @@ const favouritesSlice = createSlice({
       state.push(specID);
       localStorage.setItem('favourites', JSON.stringify(state));
     },
+    removeFavourite: (state, action: PayloadAction<SpecifiedArtworkID>) => {
+      const index = findSpecifiedID(action.payload, state);
+      if (index === -1) return;
+      state.splice(index, 1);
+    },
   },
 });
 
-export const { addFavourite } = favouritesSlice.actions;
+export const { addFavourite, removeFavourite } = favouritesSlice.actions;
 export default favouritesSlice.reducer;
