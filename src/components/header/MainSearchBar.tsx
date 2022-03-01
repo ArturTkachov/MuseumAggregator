@@ -17,6 +17,7 @@ const MainSearchBar = React.memo<FC>(() => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     setValue('');
+    if (!value) return;
     navigate(`./search/${value}`);
   };
 
