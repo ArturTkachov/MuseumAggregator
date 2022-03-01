@@ -14,15 +14,8 @@ interface Props {
 }
 
 const CollectionPage: FC<Props> = (props) => {
-  const [length, setLength] = useState(5);
-  const idsRef = useRef<SpecifiedArtworkID[]>([]);
-  idsRef.current = useRandomSpecifiedCollectionIDs(
-    length - idsRef.current.length,
-    props.collection,
-    idsRef.current
-  );
-
   const collection = props.collection;
+
   const title = useMemo(
     () =>
       collection
@@ -32,11 +25,29 @@ const CollectionPage: FC<Props> = (props) => {
     [collection]
   );
 
-  if (!idsRef.current.length) return <div>Loading...</div>;
+  const initialIDs: SpecifiedArtworkID[] = useMemo(() => {
+    const storageIDs = sessionStorage.getItem(collection);
+    return storageIDs ? JSON.parse(storageIDs) : [];
+  }, [collection]);
+  const [length, setLength] = useState(
+    initialIDs.length ? initialIDs.length : 5
+  );
+  const usedIDsRef = useRef(initialIDs);
+  usedIDsRef.current = useRandomSpecifiedCollectionIDs(
+    length - usedIDsRef.current.length,
+    props.collection,
+    usedIDsRef.current
+  );
+
+  const usedIDs = usedIDsRef.current;
+  const displayIDs = usedIDs.length > 15 ? usedIDs.slice(-15) : usedIDs;
+  sessionStorage.setItem(collection, JSON.stringify(displayIDs));
+
+  if (!displayIDs.length) return <div>Loading...</div>;
   return (
     <div id="collection-page">
       <PageTitle text={title} underlined={true} />
-      <ArtworkPreviewsList specifiedIDs={idsRef.current} />
+      <ArtworkPreviewsList specifiedIDs={displayIDs} />
       <WideIconButton
         src={loadMoreSrc}
         backgroundColor={ColorName.Yellow}
