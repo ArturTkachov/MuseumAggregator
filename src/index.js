@@ -13,6 +13,7 @@ const Collections = React.lazy(() => import('./pages/Collections'));
 const CollectionPage = React.lazy(() => import('./pages/CollectionPage'));
 const Favourites = React.lazy(() => import('./pages/Favourites'));
 const ArtworkPageProxy = React.lazy(() => import('./pages/ArtworkPageProxy'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
 ReactDOM.render(
   <React.StrictMode>
@@ -78,6 +79,14 @@ ReactDOM.render(
             }
           />
           <Route path="attribution" element={<p>Attribution</p>} />
+          <Route
+            path="search/:query"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <SearchPage />
+              </React.Suspense>
+            }
+          />
           <Route path="*" element={<p>Not found</p>} />
         </Route>
       </Routes>
