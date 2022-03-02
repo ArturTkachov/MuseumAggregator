@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MuseumAggregator/static/css/main.aa7f683b.chunk.css",
+    "main.css": "/MuseumAggregator/static/css/main.66c0cedd.chunk.css",
     "main.js": "/MuseumAggregator/static/js/main.41d2134d.chunk.js",
     "main.js.map": "/MuseumAggregator/static/js/main.41d2134d.chunk.js.map",
     "runtime-main.js": "/MuseumAggregator/static/js/runtime-main.28855c42.js",
@@ -30,7 +30,7 @@
     "static/css/5.cf212bcb.chunk.css.map": "/MuseumAggregator/static/css/5.cf212bcb.chunk.css.map",
     "static/css/6.d766f8a8.chunk.css.map": "/MuseumAggregator/static/css/6.d766f8a8.chunk.css.map",
     "static/css/7.51da51ee.chunk.css.map": "/MuseumAggregator/static/css/7.51da51ee.chunk.css.map",
-    "static/css/main.aa7f683b.chunk.css.map": "/MuseumAggregator/static/css/main.aa7f683b.chunk.css.map",
+    "static/css/main.66c0cedd.chunk.css.map": "/MuseumAggregator/static/css/main.66c0cedd.chunk.css.map",
     "static/js/2.0db5bd02.chunk.js.LICENSE.txt": "/MuseumAggregator/static/js/2.0db5bd02.chunk.js.LICENSE.txt",
     "static/media/Antiquity.4c3f4841.svg": "/MuseumAggregator/static/media/Antiquity.4c3f4841.svg",
     "static/media/index.css": "/MuseumAggregator/static/media/Comfortaa-VariableFont_wght.42599e57.ttf",
@@ -48,7 +48,7 @@
   "entrypoints": [
     "static/js/runtime-main.28855c42.js",
     "static/js/2.0db5bd02.chunk.js",
-    "static/css/main.aa7f683b.chunk.css",
+    "static/css/main.66c0cedd.chunk.css",
     "static/js/main.41d2134d.chunk.js"
   ]
 }
