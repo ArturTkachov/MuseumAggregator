@@ -5,6 +5,7 @@ import ArtworkPreviewsList from '../components/preview/ArtworkPreviewsList';
 import { useGetMetArtworksIDsSearchQuery } from '../apis/metApi';
 import specifyID from '../actions/specifyID';
 import LoadMoreButton from '../components/LoadMoreButton';
+import { PageLoadingSpinner } from '../components/LoadingSpinner';
 
 const SearchPage: FC = () => {
   const [index, setIndex] = useState(0);
@@ -15,7 +16,8 @@ const SearchPage: FC = () => {
     { skip: !Boolean(query) }
   );
 
-  if (isLoading || !ids) return <>Loading...</>;
+  if (isLoading) return <PageLoadingSpinner />;
+  if (!ids) return <p>No results found</p>;
   const specIDs = ids
     .slice(index, index + 15)
     .map((id) => specifyID('met', id));

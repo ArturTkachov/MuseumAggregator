@@ -5,6 +5,7 @@ import { SpecifiedArtworkID } from '../types/SpecifiedArtworkID';
 import useRandomSpecifiedCollectionIDs from '../hooks/useRandomSpecifiedCollectionIDs';
 import PageTitle from '../components/PageTitle';
 import LoadMoreButton from '../components/LoadMoreButton';
+import { PageLoadingSpinner } from '../components/LoadingSpinner';
 import './css/CollectionPage.css';
 
 interface Props {
@@ -41,7 +42,7 @@ const CollectionPage: FC<Props> = (props) => {
   const displayIDs = usedIDs.length > 15 ? usedIDs.slice(-15) : usedIDs;
   sessionStorage.setItem(collection, JSON.stringify(displayIDs));
 
-  if (!displayIDs.length) return <div>Loading...</div>;
+  if (!displayIDs.length) return <PageLoadingSpinner />;
   return (
     <div id="collection-page">
       <PageTitle text={title} underlined={true} />
