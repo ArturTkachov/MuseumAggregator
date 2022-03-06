@@ -1,3 +1,7 @@
+.expandable-wiki-info .loading-text {
+  margin-top: 0.5rem;
+}
+
 .wiki-info-name {
   cursor: pointer;
   padding: 1rem 0 1rem 2rem;
@@ -9,7 +13,11 @@
   align-items: center;
 }
 
-.wiki-info-name * {
+.wiki-info {
+  text-align: justify;
+}
+
+.wiki-info * {
   max-width: 100%;
 }
 
