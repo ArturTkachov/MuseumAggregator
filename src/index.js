@@ -9,7 +9,6 @@ import reportWebVitals from './reportWebVitals';
 import Home from './pages/Home';
 import { PageLoadingSpinner } from './components/LoadingSpinner';
 import { CollectionType } from './types/CollectionType';
-import LoadingText from './components/artwork-page/LoadingText';
 
 const Collections = React.lazy(() => import('./pages/Collections'));
 const CollectionPage = React.lazy(() => import('./pages/CollectionPage'));
@@ -80,7 +79,7 @@ ReactDOM.render(
               </React.Suspense>
             }
           />
-          <Route path="attribution" element={<LoadingText />} />
+          <Route path="attribution" element={<p>Attribution</p>} />
           <Route
             path="search/:query"
             element={
