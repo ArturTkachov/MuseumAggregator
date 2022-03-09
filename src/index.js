@@ -7,6 +7,7 @@ import { store } from './store';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import Home from './pages/Home';
+import { PageLoadingSpinner } from './components/LoadingSpinner';
 import { CollectionType } from './types/CollectionType';
 
 const Collections = React.lazy(() => import('./pages/Collections'));
@@ -32,7 +33,7 @@ ReactDOM.render(
           <Route
             path="collections"
             element={
-              <React.Suspense fallback={<>...</>}>
+              <React.Suspense fallback={<PageLoadingSpinner />}>
                 <Collections />
               </React.Suspense>
             }
@@ -40,7 +41,7 @@ ReactDOM.render(
           <Route
             path="collections/antiquity"
             element={
-              <React.Suspense fallback={<>...</>}>
+              <React.Suspense fallback={<PageLoadingSpinner />}>
                 <CollectionPage collection={CollectionType.Antiquity} />
               </React.Suspense>
             }
@@ -48,7 +49,7 @@ ReactDOM.render(
           <Route
             path="collections/asia"
             element={
-              <React.Suspense fallback={<>...</>}>
+              <React.Suspense fallback={<PageLoadingSpinner />}>
                 <CollectionPage collection={CollectionType.Asia} />
               </React.Suspense>
             }
@@ -56,7 +57,7 @@ ReactDOM.render(
           <Route
             path="collections/middle-ages"
             element={
-              <React.Suspense fallback={<>...</>}>
+              <React.Suspense fallback={<PageLoadingSpinner />}>
                 <CollectionPage collection={CollectionType.MiddleAges} />
               </React.Suspense>
             }
@@ -64,7 +65,7 @@ ReactDOM.render(
           <Route
             path=":source/:id"
             element={
-              <React.Suspense fallback={<>...</>}>
+              <React.Suspense fallback={<PageLoadingSpinner />}>
                 <ArtworkPageProxy />
               </React.Suspense>
             }
@@ -73,7 +74,7 @@ ReactDOM.render(
           <Route
             path="favourites"
             element={
-              <React.Suspense fallback={<>...</>}>
+              <React.Suspense fallback={<PageLoadingSpinner />}>
                 <Favourites />
               </React.Suspense>
             }
@@ -82,7 +83,7 @@ ReactDOM.render(
           <Route
             path="search/:query"
             element={
-              <React.Suspense fallback={<>...</>}>
+              <React.Suspense fallback={<PageLoadingSpinner />}>
                 <SearchPage />
               </React.Suspense>
             }

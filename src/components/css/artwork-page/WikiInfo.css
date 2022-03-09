@@ -1,0 +1,7 @@
+.wiki-info {
+    text-align: justify;
+}
+
+.wiki-info * {
+    max-width: 100%;
+}
