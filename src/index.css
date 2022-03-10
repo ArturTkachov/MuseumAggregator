@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: "Comfortaa", sans-serif;
   background-color: #fef6ed;
+  overflow-y: scroll;
 }
 
 .border-top {
