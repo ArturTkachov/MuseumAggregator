@@ -15,6 +15,7 @@ const CollectionPage = React.lazy(() => import('./pages/CollectionPage'));
 const Favourites = React.lazy(() => import('./pages/Favourites'));
 const ArtworkPageProxy = React.lazy(() => import('./pages/ArtworkPageProxy'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const RandomArtworkPage = React.lazy(() => import('pages/RandomArtworkPage'));
 
 ReactDOM.render(
   <React.StrictMode>
@@ -70,7 +71,14 @@ ReactDOM.render(
               </React.Suspense>
             }
           />
-          <Route path="random" element={<p>Random</p>} />
+          <Route
+            path="random"
+            element={
+              <React.Suspense fallback={<PageLoadingSpinner />}>
+                <RandomArtworkPage />
+              </React.Suspense>
+            }
+          />
           <Route
             path="favourites"
             element={

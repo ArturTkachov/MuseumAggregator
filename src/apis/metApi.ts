@@ -11,12 +11,12 @@ export const metApi = createApi({
     baseUrl: 'https://collectionapi.metmuseum.org/public/collection/v1/',
   }),
   endpoints: (builder) => ({
-    getMetArtworksIDsSearch: builder.query<number[], string>({
+    getMetArtworksIDsBySearch: builder.query<number[], string>({
       query: (arg) => `search?hasImages=true&q=${encodeURI(arg)}`,
       transformResponse: extractIDsArray,
       keepUnusedDataFor: 80,
     }),
-    getMetArtworksIDs: builder.query<number[], void>({
+    getAllMetArtworksIDs: builder.query<number[], void>({
       query: () => 'search?hasImages=true&q=""',
       transformResponse: extractIDsArray,
       keepUnusedDataFor: 600,
@@ -34,8 +34,8 @@ export const metApi = createApi({
 });
 
 export const {
-  useGetMetArtworksIDsQuery,
+  useGetAllMetArtworksIDsQuery,
   useGetMetDepartmentArtworksIDsQuery,
   useGetMetArtworkByIDQuery,
-  useGetMetArtworksIDsSearchQuery,
+  useGetMetArtworksIDsBySearchQuery,
 } = metApi;
