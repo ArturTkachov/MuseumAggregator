@@ -1,0 +1,2 @@
+(this.webpackJsonpapp=this.webpackJsonpapp||[]).push([[8],{86:function(t,a,c){"use strict";c.r(a);var e=c(18),n=c(10),s=c(29),r=c(36),i=c(3),o=c(1);a.default=function(){var t=Object(e.b)(),a=t.data;if(t.isLoading||!a)return Object(o.jsx)(n.a,{});var c=Object(s.a)("met",Object(r.a)(a));return Object(o.jsx)(i.a,{to:"../".concat(c.source,"/").concat(c.id)})}}}]);
+//# sourceMappingURL=8.827f304b.chunk.js.map
