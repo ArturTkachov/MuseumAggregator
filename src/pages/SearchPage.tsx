@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import PageTitle from '../components/PageTitle';
 import { useParams } from 'react-router-dom';
 import ArtworkPreviewsList from '../components/preview/ArtworkPreviewsList';
-import { useGetMetArtworksIDsSearchQuery } from '../apis/metApi';
+import { useGetMetArtworksIDsBySearchQuery } from '../apis/metApi';
 import specifyID from '../actions/specifyID';
 import LoadMoreButton from '../components/LoadMoreButton';
 import { PageLoadingSpinner } from '../components/LoadingSpinner';
@@ -11,7 +11,7 @@ const SearchPage: FC = () => {
   const [index, setIndex] = useState(0);
 
   const { query } = useParams();
-  const { data: ids, isLoading } = useGetMetArtworksIDsSearchQuery(
+  const { data: ids, isLoading } = useGetMetArtworksIDsBySearchQuery(
     String(query),
     { skip: !Boolean(query) }
   );
